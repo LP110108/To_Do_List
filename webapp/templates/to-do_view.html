@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <title>To-do View Task</title>
+</head>
+<body>
+    <h1 class="tasks">Tasks</h1>
+    <div class="views_box">
+{% for task in task %}
+        <div class="views">
+            <h2>{{ task.summary }}</h2>
+            <p><a href="/view/task/{{ task.pk }}">Посмотреть</a></p>
+        </div>
+{% endfor %}
+    </div>
+
+</body>
+</html>

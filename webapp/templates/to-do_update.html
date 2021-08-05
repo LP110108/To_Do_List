@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <title>To-Do List</title>
+</head>
+<body>
+<div class="form_box">
+    <form method="post">
+        {% csrf_token %}
+        <label>Заголовок</label> <br>
+        <input name="summary" type="text"> <br>
+        <label>Описание:</label><br>
+        <textarea name="description" cols="30" rows="10" required></textarea><br>
+        <label>Статус:</label><br>
+        <select name="status" id="" required>
+            <option name="new" value="0">Новое</option>
+            <option name="in progress" value="1">В процессе</option>
+            <option name="done" value="2">Сделано</option>
+        </select><br>
+        <input type="submit" value="Сохранить">
+    </form>
+</div>
+</body>
+</html>

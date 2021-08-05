@@ -1,0 +1,1 @@
+[{"model": "webapp.task", "pk": 1, "fields": {"summary": "title", "description": "dasdadsa", "created_at": null}}, {"model": "webapp.task", "pk": 2, "fields": {"summary": "title1", "description": "dasda1dsa", "created_at": null}}, {"model": "webapp.status", "pk": 1, "fields": {"status": 2, "all_statuses": "new"}}]

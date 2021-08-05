@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <title>Title</title>
+</head>
+<body>
+<p class="main_page"><a href="/">На главную</a></p>
+<div class="view_box">
+    <div class="view_item">
+        <h2>Title:</h2>
+        <p>{{ task.summary }}</p>
+        <h2>Description:</h2>
+        <div class="description">
+            <p>{{ task.description }}</p>
+        </div>
+        <a class="delete" href="{% url "article_delete" task.pk %}">Удалить</a>
+        <a href="{% url 'article_update' task.pk %}">Редактировать</a>
+    </div>
+</div>
+</body>
+</html>
